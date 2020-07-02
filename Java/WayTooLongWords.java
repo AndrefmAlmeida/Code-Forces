@@ -16,5 +16,6 @@ public class WayTooLongWords {
                 System.out.println(word);
             }
         }
+        input.close();
     }
 }
