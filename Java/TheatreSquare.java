@@ -17,5 +17,6 @@ public class TheatreSquare {
             ++countm;
 
         System.out.println(countn * countm);
+        reader.close();
     }
 }
