@@ -1,31 +1,21 @@
 import java.util.Scanner;
 
 public class TheatreSquare {
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        long n = reader.nextInt();
+        long m = reader.nextInt();
+        long a = reader.nextInt();
 
-    public static final void main(String[] args) {
-        Scanner input = new Scanner(System.in).useDelimiter(" ");
-        String in = input.nextLine();
-        String[] t = in.split(" ");
+        long countn = n / a;
+        long countm = m / a;
 
-        long n = Integer.parseInt(t[0]);
-        long m = Integer.parseInt(t[1]);
-        long a = Integer.parseInt(t[2]);
+        if (n % a != 0)
+            ++countn;
 
-        System.out.println("aqui: " + (n * m) / (a * a));
-        System.out.println((12 * 13) / (4 * 4));
-        System.out.println((12 * 13) % (4 * 4));
+        if (m % a != 0)
+            ++countm;
 
-        if ((n * m) % (a * a) == 0) {
-            System.out.println((n * m) / (a * a));
-        } else if ((n * m) / (a * a) == 0) {
-            System.out.println("1");
-        } else if ((n * m) % (a * a) == 0.75) {
-            System.out.println((n * m) / (a * a) + 3);
-        } else {
-            System.out.println((n * m) / (a * a) + 2);
-        }
-
-        input.close();
+        System.out.println(countn * countm);
     }
-
 }
